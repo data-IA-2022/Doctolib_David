@@ -1,0 +1,96 @@
+#### Colones
+- id 
+- poids (kg)
+- taille (cm)
+- Fréquence cardiaque par minutes 
+- Tension arterielle systolique matin
+- Tension arterielle systolique soir
+- Tension arterielle dystolique matin
+- Tension arterielle dystolique soir
+- Description des symptômes cardio
+- Nombres de médicaments
+- Oublie prise de medicaments
+- Présence d'effets secondaire
+- Symptômes particulier
+- Description des effets/symptômes rencontré
+- Consommation d'alcool
+- Grignotage sucré
+- Grignotage salé
+- Nombre de repas pris dans la journée
+- Quantité d'eau en litre
+- Quantité d'alcool en litre
+- Activité physique du jour
+- Description de l'activité
+- Durée de l'activité
+- dyspnée
+- oedème
+- épisodes infectieux
+- fièvre
+- palpitation
+- douleur thoracique
+- malaise
+- l'heure du début des palpitation
+- Durée total des palpitation (minutes)
+- l'heure du début des douleurs thoraciques
+- Durée total des douleurs thoraciques (minutes)
+- l'heure du début des malaises
+- Durée total des malaises (minutes)
+- Valeurs de natrémie (mmol/l)
+- Valeurs de potassiim (mmol/l)
+- Valeurs de créatine (micromol/l)
+- Valeurs de clairance de créatine (ml/l)
+- Taux de NT Probnp (ng/l)
+- Taux de fer sérique (mg/l)
+- Taux d'hémoglobine (g/100 ml)
+- Valeurs de vitesse de sédimentation (mm)
+- Taux de protéine C réactive (mg/l)
+- Taux de troponine (microgrammes / litre)
+- Taux de vitamine D (ng/ml de sang)
+- Taux d'acide urique (mg/l)
+- Taux de INR (International Normalized Ratio)
+
+- irritabilité (0, 1, 5, 10)
+- sentiments dépressifs (0, 1, 5, 10)
+- bouche sèche ou gorge sèche (0, 1, 5, 10)
+- actions ou gestes impulsifs (0, 1, 5, 10)
+- grincement des dents (0, 1, 5, 10)
+- difficulté à rester assis (0, 1, 5, 10)
+- cauchermars (0, 1, 5, 10)
+- diarrhée (0, 1, 5, 10)
+- attaques verbales envers quelqu'un (0, 1, 5, 10) (0, 1, 5, 10)
+- hauts et bas émotifs (0, 1, 5, 10)
+- grande envie de pleurer (0, 1, 5, 10)
+- grande envie de fuir (0, 1, 5, 10)
+- grande envie de faire mal (0, 1, 5, 10)
+- pensées embrouillées (0, 1, 5, 10)
+- débit plus rapide (0, 1, 5, 10)
+- fatigue ou lourdeur généralisées (0, 1, 5, 10)
+- sentiment d'être surchargé(e) (0, 1, 5, 10)
+- sentiment d'être émotivement fragile (0, 1, 5, 10)
+- sentiment de tristesse (0, 1, 5, 10)
+- sentiment d'anxiété (0, 1, 5, 10)
+- tension émotionnelle (0, 1, 5, 10)
+- hostilité envers les autres (0, 1, 5, 10)
+- tremblements ou gestes nerveux (0, 1, 5, 10)
+- bégaiements ou hésitations verbales (0, 1, 5, 10)
+- incapacité ou difficulté à se concentrer (0, 1, 5, 10)
+- difficulté à organiser ses pensées (0, 1, 5, 10)
+- difficulté à dormir toute la nuit sans se réveiller (0, 1, 5, 10)
+- besoin fréquent d'uriner (0, 1, 5, 10)
+- maux d'estomac ou difficultés à digérer (0, 1, 5, 10)
+- geste ou sentiment d'impatience (0, 1, 5, 10)
+- maux de tête (0, 1, 5, 10)
+- douleurs au dos ou à la nuque (0, 1, 5, 10)
+- perte ou gain d'appétit (0, 1, 5, 10)
+- perte d'intérêt pour le sexe (0, 1, 5, 10)
+- oublis fréquents (0, 1, 5, 10)
+- douleurs ou serrements à la poitrine (0, 1, 5, 10)
+- conflits significatifs avec les autres (0, 1, 5, 10)
+- difficultés à se lever après le sommeil (0, 1, 5, 10)
+- sentiment que les choses sont hors de contrôle (0, 1, 5, 10)
+- difficulté à faire une longue activité continue (0, 1, 5, 10)
+- mouvements de retrait, d'isolement (0, 1, 5, 10)
+- difficulté à s'endormir (0, 1, 5, 10)
+- difficulté à se remettre d'un événement contrariant (0, 1, 5, 10)
+- mains moites (0, 1, 5, 10)
+- total de l'impact du stress dans votre vie actuelle (0, 1, 5, 10)
