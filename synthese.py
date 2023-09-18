@@ -43,7 +43,7 @@ for _ in range(10_000):
         'Durée total des douleurs thoraciques (minutes)': random.randint(5, 120),
         'l\'heure du début des malaises': random.randint(1,24),
         'Durée total des malaises (minutes)': random.randint(15, 120),
-        'Valeurs de natrémie (mmol/l)': random.uniform(100, 200), # valeur normale 135 - 145
+        'Valeurs de natrémie (mmol/l)': random.uniform(100, 200), # valeur uniforme 135 - 145
         'Valeurs de potassim (mmol/l)': random.uniform(2.5, 6.5),
         'Valeurs de créatine (micromol/l)': random.randint(35, 120),
         'Valeurs de clairance de créatine (ml/l)': random.randint(60, 140),
@@ -55,7 +55,7 @@ for _ in range(10_000):
         'Taux de troponine (microgrammes / litre)': random.uniform(0.3, 0.6),
         'Taux de vitamine D (ng/ml de sang)': random.randint(20, 60),
         'Taux d\'acide urique (mg/l)': random.randint(150, 420),
-        'Taux de INR (International Normalized Ratio)': random.randint(1, 6),
+        'Taux de INR (International uniformized Ratio)': random.randint(1, 6),
         # Continue adding more columns as needed...
     }
     data = data._append(row, ignore_index=True)
