@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.template import loader
 
 @login_required
-def members(request):
-  return render(request, 'index.html', locals())
+def home(request):
+  return render(request, 'index.html')
 
 # Create your views here.

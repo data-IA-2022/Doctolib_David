@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from doctolib.views import members
+from doctolib.views import home
 from authentification.views import connexion, deconnect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', members),
+    path('home/', home, name='home'),
     path('', connexion, name='connexion'),
-    path('', deconnect)
+    path('deconnect', deconnect, name='deconnect')
 ]

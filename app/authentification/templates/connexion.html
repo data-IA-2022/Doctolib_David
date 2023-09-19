@@ -6,10 +6,11 @@
     <title>Connexion</title>
 </head>
 <body>
+    {{ message }}
     <form action="" method="post">
         {% csrf_token %}
-        <input type="text" name='username'>
-        <input type="text" name='mdp'>
+        <input type="text" name='username' placeholder='Username'>
+        <input type="password" name='mdp' placeholder='Passord'>
         <input type="submit">
     </form>
 </body>
