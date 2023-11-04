@@ -1,0 +1,91 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table General_form_record {
+  general_form_id integer [primary key]
+  patient_username varchar
+  poids_kg integer
+  taille_cm float
+  frequence_cardiaque float
+  tension_arterielle float
+  description_symptomes_cardio string
+  nombres_medicaments integer
+  oublie_prise_medicaments boolean
+  presence_effets_secondaire boolean
+  symptomes_particulier string
+  description_effets_symptomes string
+  consommation_alcool boolean
+  grignotage boolean
+  repas_pris_journee integer
+  quantite_eau_litre float
+  quantite_alcool_litre float
+  activite_physique_jour string
+  description_activite sting
+  duree_activite float
+}
+
+Table Stress_form_record {
+  stress_form_id integer [primary key]
+  patient_username varchar
+  dyspnee boolean
+  oedeme boolean
+  episodes_infectieux boolean
+  fievre boolean
+  palpitation boolean
+  douleur_thoracique boolean
+  malaise boolean
+  valeurs_natremie float
+  valeurs_potassium float
+  taux_fer_serique float
+  taux_hemoglobine float
+  taux_proteine_c_reactive float
+  taux_vitamine_d float
+  taux_acide_urique float
+  taux_inr integer
+  irritabilite integer
+  bouche_seche_gorge_seche integer
+  actions_gestes_impulsifs integer
+  difficulte_rester_assis integer
+  cauchermars integer
+  diarrhee integer
+  hauts_bas_emotifs integer
+  fatigue_lourdeur_generalisees integer
+  sentiment_anxiete integer
+  tension_emotionnelle integer
+  hostilite_vers_autres integer
+  tremblements_gestes_nerveux integer
+  begaiements_hesitations_verbales integer
+  incapacite_difficulte_concentrer integer
+  difficulte_dormir_nuit_sans_reveiller integer
+  besoin_frequent_uriner integer
+  maux_estomac_difficultes_digerer  integer
+  maux_tete integer
+  douleurs_dos_nuque integer
+  perte_gain_appetit integer
+  perte_interet_sexe integer
+  oublis_frequents integer
+  douleurs_serrements_poitrine integer
+  difficultes_lever_apres_sommeil integer
+  difficulte_longue_activite_continue integer
+  difficulte_s_endormir integer
+  difficulte_se_remettre_evenement_contrariant integer
+  mains_moites integer
+  impact_stress_vie_actuelle integer
+}
+
+Table Users {
+  id interger
+  username varchar [primary key]
+  password varchar
+}
+
+Table Doctor_patient {
+  username_doctor varchar 
+  username_patient varchar
+  }
+
+
+Ref: Doctor_patient.username_doctor > Users.username
+Ref: Doctor_patient.username_patient > Users.username
+Ref: Stress_form_record.patient_username > Users.username
+Ref: General_form_record.patient_username > Users.username
