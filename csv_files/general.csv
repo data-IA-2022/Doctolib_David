@@ -1,0 +1,101 @@
+id,patient_username,created_at,poids_kg,taille_cm,frequence_cardiaque,tension_arterielle,description_symptomes_cardio,nombres_medicaments,oublie_prise_medicaments,presence_effets_secondaire,symptomes_particulier,description_effets_symptomes,consommation_alcool,grignotage,repas_pris_journee_field,quantite_eau_litre,quantite_alcool_litre,activite_physique_jour,description_activite,duree_activite
+1,Nicholas,2023-10-19,,155.79529926383992,82,117,Modérés,5,Non,Non,Non,N/A,Occasionnelle,Aucun,4,1.11,0.19,Modérée,,75
+2,Nicholas,2023-11-18,,151.7609873660729,93,109,Légers,6,Non,Oui,Oui,Nausées,Aucune,Aucun,1,1.44,0.16,Modérée,,85
+3,Nicholas,2023-12-18,,159.4718708991623,70,116,Légers,3,Oui,Oui,Non,N/A,Aucune,Occasionnel,3,2.04,1.74,Aucune,,60
+4,Nicholas,2024-01-17,,185.3012609635809,87,136,Graves,8,Oui,Non,Non,Maux de tête,Aucune,Occasionnel,1,1.39,0.69,Modérée,,54
+5,Nicholas,2024-02-16,,195.2467727872894,75,102,Graves,5,Oui,Non,Non,Douleurs,Fréquente,Fréquent,2,1.87,0.73,Intense,,88
+6,Shawn,2023-10-19,,153.83000421151522,88,95,Graves,9,Non,Oui,Oui,Douleurs,Fréquente,Fréquent,2,2.3,0.64,Aucune,,40
+7,Shawn,2023-11-18,,191.1308307285685,51,111,Légers,9,Non,Oui,Oui,Maux de tête,Occasionnelle,Fréquent,1,2.9,1.56,Légère,,98
+8,Shawn,2023-12-18,,190.79787489306437,76,79,Aucun,4,Non,Oui,Oui,Maux de tête,Aucune,Occasionnel,4,1.19,0.95,Intense,,90
+9,Shawn,2024-01-17,,144.7063929080256,67,80,Graves,4,Oui,Oui,Non,N/A,Fréquente,Fréquent,3,2.3,0.36,Modérée,,93
+10,Shawn,2024-02-16,,165.04749639470631,72,103,Graves,9,Non,Oui,Oui,Douleurs,Occasionnelle,Occasionnel,2,1.74,0.85,Légère,,70
+11,Kyle,2023-10-19,,156.42322761942202,90,67,Légers,3,Oui,Oui,Non,Douleurs,Aucune,Aucun,2,2.27,1.68,Aucune,,56
+12,Kyle,2023-11-18,,157.59850783205457,60,99,Modérés,9,Oui,Oui,Oui,Maux de tête,Occasionnelle,Fréquent,4,2.57,0.25,Légère,,103
+13,Kyle,2023-12-18,,158.12240565706938,56,122,Aucun,6,Oui,Oui,Oui,Nausées,Fréquente,Aucun,3,1.9,1.87,Légère,,45
+14,Kyle,2024-01-17,,197.2672469329338,86,61,Aucun,8,Non,Non,Non,Maux de tête,Occasionnelle,Fréquent,1,2.36,0.79,Intense,,92
+15,Kyle,2024-02-16,,168.34916280411835,91,61,Légers,2,Non,Oui,Non,Maux de tête,Fréquente,Occasionnel,3,2.58,0.59,Intense,,56
+16,Kristina,2023-10-19,,179.7027451055528,83,86,Légers,9,Oui,Non,Oui,Douleurs,Occasionnelle,Aucun,2,1.08,1.87,Légère,,98
+17,Kristina,2023-11-18,,152.78889531095564,93,100,Légers,2,Non,Non,Non,Douleurs,Aucune,Aucun,1,0.81,0.55,Aucune,,74
+18,Kristina,2023-12-18,,164.34112967277665,52,108,Légers,2,Non,Non,Oui,Maux de tête,Fréquente,Aucun,4,2.87,1.06,Aucune,,96
+19,Kristina,2024-01-17,,193.08641823539344,86,105,Légers,6,Oui,Non,Non,Douleurs,Aucune,Fréquent,2,1.46,0.97,Aucune,,22
+20,Kristina,2024-02-16,,172.10378489287967,99,112,Graves,7,Non,Non,Oui,N/A,Fréquente,Aucun,2,1.2,0.11,Légère,,20
+21,Christopher,2023-10-19,,187.37665006726115,71,125,Graves,3,Non,Non,Oui,N/A,Occasionnelle,Fréquent,4,1.64,1.6,Modérée,,62
+22,Christopher,2023-11-18,,171.43257589469965,86,105,Légers,9,Non,Non,Non,Maux de tête,Fréquente,Occasionnel,2,1.66,0.02,Légère,,17
+23,Christopher,2023-12-18,,192.275353989752,85,81,Aucun,3,Oui,Non,Oui,Nausées,Occasionnelle,Occasionnel,4,0.78,1.05,Intense,,41
+24,Christopher,2024-01-17,,192.38615658601512,77,74,Graves,2,Oui,Oui,Non,Nausées,Fréquente,Fréquent,2,2.51,0.02,Intense,,71
+25,Christopher,2024-02-16,,143.48952274397953,85,71,Modérés,4,Oui,Oui,Non,Nausées,Occasionnelle,Occasionnel,3,0.81,1.05,Modérée,,57
+26,Diana,2023-10-19,,149.7929645916427,61,73,Légers,7,Non,Non,Oui,Douleurs,Aucune,Aucun,4,2.18,1.08,Légère,,72
+27,Diana,2023-11-18,,170.06545816071812,98,135,Légers,0,Non,Non,Non,Maux de tête,Occasionnelle,Occasionnel,1,2.05,0.83,Modérée,,42
+28,Diana,2023-12-18,,158.10089705108223,69,139,Modérés,3,Oui,Oui,Non,N/A,Occasionnelle,Occasionnel,3,2.15,0.96,Aucune,,119
+29,Diana,2024-01-17,,167.50811874935195,81,71,Modérés,8,Non,Oui,Oui,N/A,Aucune,Aucun,3,2.81,1.77,Légère,,71
+30,Diana,2024-02-16,,198.4467734477123,89,139,Aucun,0,Oui,Oui,Non,N/A,Occasionnelle,Aucun,3,1.11,0.67,Modérée,,45
+31,Suzanne,2023-10-19,,154.50914275002697,50,127,Graves,8,Oui,Oui,Oui,N/A,Fréquente,Occasionnel,1,2.13,0.11,Modérée,,15
+32,Suzanne,2023-11-18,,158.2129987383181,72,86,Graves,7,Non,Oui,Non,Maux de tête,Fréquente,Fréquent,4,0.5,1.76,Aucune,,92
+33,Suzanne,2023-12-18,,180.4659163452918,60,106,Graves,5,Non,Non,Oui,N/A,Fréquente,Occasionnel,3,1.04,1.06,Aucune,,80
+34,Suzanne,2024-01-17,,162.31887017375342,83,78,Aucun,4,Oui,Oui,Oui,Douleurs,Occasionnelle,Occasionnel,1,1.14,1.3,Légère,,43
+35,Suzanne,2024-02-16,,157.38989200644068,82,138,Légers,0,Non,Oui,Non,Maux de tête,Fréquente,Occasionnel,1,0.64,0.64,Légère,,44
+36,David,2023-10-19,,191.0816908790451,74,77,Aucun,4,Oui,Non,Non,Nausées,Fréquente,Aucun,3,0.66,0.98,Modérée,,56
+37,David,2023-11-18,,157.66535770180113,65,120,Modérés,3,Non,Non,Oui,Douleurs,Aucune,Fréquent,4,0.51,1.15,Intense,,115
+38,David,2023-12-18,,162.32352689947754,69,93,Modérés,4,Non,Non,Oui,Douleurs,Occasionnelle,Occasionnel,4,1.97,0.29,Aucune,,59
+39,David,2024-01-17,,168.401046940145,81,124,Légers,2,Oui,Non,Oui,Douleurs,Aucune,Aucun,1,0.68,1.72,Intense,,57
+40,David,2024-02-16,,165.40643873900578,63,104,Modérés,3,Non,Oui,Non,Maux de tête,Aucune,Occasionnel,3,2.72,0.74,Modérée,,76
+41,Devin,2023-10-19,,190.76431517412254,55,112,Aucun,4,Oui,Non,Non,Maux de tête,Aucune,Occasionnel,2,0.62,0.12,Légère,,108
+42,Devin,2023-11-18,,194.70991454364304,61,80,Graves,1,Oui,Oui,Non,Douleurs,Fréquente,Fréquent,4,2.02,0.28,Modérée,,94
+43,Devin,2023-12-18,,169.76024792301666,69,115,Légers,2,Oui,Oui,Oui,N/A,Occasionnelle,Aucun,4,0.78,0.99,Légère,,63
+44,Devin,2024-01-17,,198.86076060042305,80,71,Modérés,0,Oui,Non,Non,Maux de tête,Occasionnelle,Aucun,3,1.23,1.38,Légère,,49
+45,Devin,2024-02-16,,143.25669427584324,53,127,Légers,3,Oui,Oui,Non,Nausées,Fréquente,Aucun,4,1.17,1.73,Aucune,,47
+46,Anthony,2023-10-19,,178.82504085513565,82,127,Modérés,5,Non,Oui,Non,Nausées,Fréquente,Aucun,2,0.96,0.15,Modérée,,91
+47,Anthony,2023-11-18,,172.2764099988445,93,71,Légers,7,Non,Non,Oui,Douleurs,Fréquente,Aucun,1,0.69,0.05,Aucune,,79
+48,Anthony,2023-12-18,,185.51999172407227,90,131,Légers,1,Non,Non,Oui,Douleurs,Fréquente,Occasionnel,3,2.26,1.19,Légère,,17
+49,Anthony,2024-01-17,,141.33422386065192,68,105,Aucun,5,Oui,Oui,Oui,Nausées,Occasionnelle,Fréquent,3,1.97,1.55,Modérée,,30
+50,Anthony,2024-02-16,,173.31522828401387,52,126,Aucun,5,Oui,Oui,Non,N/A,Fréquente,Occasionnel,3,0.85,0.38,Aucune,,94
+51,Steven,2023-10-19,,153.24563697752305,84,68,Graves,9,Oui,Non,Oui,N/A,Aucune,Aucun,3,2.88,0.52,Intense,,64
+52,Steven,2023-11-18,,179.11340863340945,80,111,Graves,0,Oui,Oui,Oui,Maux de tête,Fréquente,Fréquent,2,1.9,0.12,Intense,,84
+53,Steven,2023-12-18,,143.31834991070832,67,101,Légers,2,Oui,Non,Non,N/A,Occasionnelle,Occasionnel,3,1.51,0.88,Intense,,78
+54,Steven,2024-01-17,,177.8223502210479,81,87,Modérés,7,Non,Non,Oui,Douleurs,Occasionnelle,Occasionnel,4,1.37,0.43,Aucune,,82
+55,Steven,2024-02-16,,143.99507656888557,99,131,Modérés,5,Oui,Oui,Non,Nausées,Fréquente,Fréquent,4,2.64,1.5,Aucune,,80
+56,Marcus,2023-10-19,,148.66592545973475,90,102,Modérés,3,Non,Oui,Oui,Nausées,Occasionnelle,Fréquent,4,2.67,0.82,Modérée,,28
+57,Marcus,2023-11-18,,155.64217417983525,77,125,Aucun,6,Non,Non,Non,Douleurs,Fréquente,Occasionnel,1,2.09,1.4,Aucune,,77
+58,Marcus,2023-12-18,,191.6802749572201,76,135,Aucun,0,Oui,Non,Non,Douleurs,Occasionnelle,Occasionnel,3,1.53,0.32,Modérée,,19
+59,Marcus,2024-01-17,,182.93825478602645,73,61,Aucun,7,Oui,Oui,Non,N/A,Fréquente,Fréquent,4,2.85,0.56,Modérée,,108
+60,Marcus,2024-02-16,,194.02816575560803,74,108,Graves,1,Non,Non,Non,Maux de tête,Aucune,Aucun,1,2.98,0.38,Modérée,,74
+61,Nicole,2023-10-19,,182.72917198545173,78,71,Aucun,8,Non,Non,Non,Douleurs,Aucune,Fréquent,1,1.28,0.54,Aucune,,16
+62,Nicole,2023-11-18,,182.68062702029226,97,98,Aucun,8,Non,Oui,Non,Douleurs,Occasionnelle,Aucun,2,0.89,1.09,Aucune,,113
+63,Nicole,2023-12-18,,167.9364113400735,57,109,Graves,2,Oui,Non,Oui,Maux de tête,Aucune,Fréquent,2,2.83,1.61,Intense,,99
+64,Nicole,2024-01-17,,154.47284103359357,68,106,Modérés,3,Oui,Oui,Oui,N/A,Fréquente,Fréquent,2,2.33,0.04,Légère,,108
+65,Nicole,2024-02-16,,162.24705723219392,64,128,Aucun,2,Oui,Oui,Oui,Douleurs,Aucune,Fréquent,4,0.7,1.12,Intense,,101
+66,Robert,2023-10-19,,148.4638737799128,62,66,Graves,1,Non,Non,Non,Douleurs,Occasionnelle,Occasionnel,3,1.8,1.55,Légère,,41
+67,Robert,2023-11-18,,196.6330817674556,59,71,Légers,4,Non,Oui,Non,Nausées,Fréquente,Aucun,2,1.87,1.62,Aucune,,119
+68,Robert,2023-12-18,,168.33182487195586,80,116,Graves,5,Oui,Non,Oui,Douleurs,Fréquente,Occasionnel,4,2.16,1.54,Intense,,48
+69,Robert,2024-01-17,,143.23724860698047,51,94,Graves,6,Non,Non,Non,N/A,Aucune,Fréquent,2,1.98,0.68,Aucune,,111
+70,Robert,2024-02-16,,194.42072571562574,93,97,Modérés,0,Non,Non,Oui,N/A,Occasionnelle,Aucun,2,1.87,1.05,Légère,,60
+71,Felicia,2023-10-19,,151.9399418727009,67,139,Graves,4,Non,Non,Non,Douleurs,Aucune,Fréquent,1,1.33,1.54,Intense,,37
+72,Felicia,2023-11-18,,177.467496464573,55,88,Modérés,0,Oui,Oui,Oui,Maux de tête,Fréquente,Fréquent,2,2.36,0.48,Modérée,,18
+73,Felicia,2023-12-18,,151.75385682163164,99,135,Aucun,1,Oui,Oui,Oui,Nausées,Aucune,Fréquent,4,2.99,1.33,Aucune,,49
+74,Felicia,2024-01-17,,168.93019158804208,61,77,Légers,1,Non,Oui,Oui,Maux de tête,Aucune,Aucun,2,1.9,1.39,Intense,,40
+75,Felicia,2024-02-16,,189.14563180160278,77,72,Modérés,9,Non,Non,Oui,Douleurs,Occasionnelle,Fréquent,4,0.69,1.56,Légère,,93
+76,Lisa,2023-10-19,,151.19918936034668,62,131,Modérés,2,Non,Non,Oui,Nausées,Aucune,Occasionnel,2,1.22,0.34,Aucune,,92
+77,Lisa,2023-11-18,,182.0567088087307,84,68,Aucun,8,Oui,Non,Oui,Douleurs,Occasionnelle,Aucun,4,2.98,1.98,Modérée,,25
+78,Lisa,2023-12-18,,161.08740002569016,54,95,Graves,0,Oui,Non,Non,Douleurs,Fréquente,Occasionnel,2,2.21,0.63,Légère,,49
+79,Lisa,2024-01-17,,172.31391057106856,72,67,Aucun,3,Non,Non,Oui,Maux de tête,Fréquente,Occasionnel,4,1.15,1.18,Intense,,110
+80,Lisa,2024-02-16,,140.29544925596812,70,82,Légers,3,Oui,Non,Oui,Maux de tête,Aucune,Aucun,4,1.47,1.83,Légère,,102
+81,Carrie,2023-10-19,,159.9731332334312,73,84,Aucun,3,Non,Non,Oui,N/A,Fréquente,Occasionnel,1,2.36,0.56,Légère,,23
+82,Carrie,2023-11-18,,146.33140214790538,57,95,Modérés,1,Oui,Oui,Non,Maux de tête,Occasionnelle,Aucun,2,3.0,0.19,Aucune,,22
+83,Carrie,2023-12-18,,153.62143967399166,71,74,Graves,0,Oui,Oui,Non,Maux de tête,Aucune,Occasionnel,1,1.0,0.72,Aucune,,99
+84,Carrie,2024-01-17,,175.7176591286896,63,97,Aucun,9,Non,Oui,Non,N/A,Fréquente,Aucun,3,2.93,0.7,Légère,,119
+85,Carrie,2024-02-16,,174.2756232858626,53,127,Graves,9,Non,Oui,Non,Douleurs,Fréquente,Aucun,4,2.33,0.74,Modérée,,15
+86,Juan,2023-10-19,,143.3852085429791,63,72,Modérés,1,Oui,Oui,Oui,Maux de tête,Occasionnelle,Occasionnel,1,2.57,0.81,Aucune,,64
+87,Juan,2023-11-18,,175.5522969076472,73,62,Graves,9,Oui,Oui,Oui,Nausées,Fréquente,Aucun,2,1.12,1.35,Intense,,116
+88,Juan,2023-12-18,,146.48606165668215,77,72,Graves,8,Non,Oui,Oui,Maux de tête,Fréquente,Occasionnel,1,2.14,1.86,Aucune,,108
+89,Juan,2024-01-17,,163.40128632267556,81,93,Modérés,4,Oui,Oui,Non,Maux de tête,Aucune,Occasionnel,1,2.18,1.06,Modérée,,59
+90,Juan,2024-02-16,,178.80886737273624,76,114,Modérés,0,Oui,Oui,Non,Douleurs,Fréquente,Occasionnel,3,2.11,0.34,Légère,,41
+91,Denise,2023-10-19,,197.0581753049177,78,88,Aucun,7,Oui,Oui,Non,N/A,Aucune,Aucun,4,2.08,0.37,Modérée,,22
+92,Denise,2023-11-18,,178.8699338586704,59,69,Graves,0,Non,Oui,Non,Nausées,Occasionnelle,Occasionnel,3,1.28,0.87,Intense,,54
+93,Denise,2023-12-18,,164.94438118782074,97,126,Légers,5,Non,Non,Non,N/A,Fréquente,Fréquent,1,0.7,1.51,Aucune,,119
+94,Denise,2024-01-17,,170.09715569662893,72,73,Modérés,1,Non,Non,Oui,Douleurs,Aucune,Occasionnel,4,2.1,0.81,Aucune,,102
+95,Denise,2024-02-16,,183.20412839364724,59,96,Aucun,5,Non,Non,Oui,Nausées,Aucune,Occasionnel,3,0.76,1.08,Intense,,99
+96,Kristy,2023-10-19,,144.44025502010544,90,97,Graves,4,Oui,Non,Non,Nausées,Occasionnelle,Fréquent,1,2.13,1.07,Modérée,,54
+97,Kristy,2023-11-18,,198.08285199071702,58,122,Modérés,0,Non,Oui,Oui,Maux de tête,Occasionnelle,Occasionnel,1,1.46,0.52,Légère,,63
+98,Kristy,2023-12-18,,161.74115131101098,75,119,Modérés,1,Non,Non,Oui,Douleurs,Occasionnelle,Aucun,4,0.66,1.58,Légère,,113
+99,Kristy,2024-01-17,,160.45861620812326,97,123,Modérés,3,Oui,Non,Non,Douleurs,Fréquente,Occasionnel,1,1.44,1.13,Aucune,,96
+100,Kristy,2024-02-16,,157.89394824714617,76,97,Graves,7,Non,Oui,Non,Nausées,Fréquente,Fréquent,1,1.8,1.89,Modérée,,46

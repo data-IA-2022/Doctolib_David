@@ -1,0 +1,17 @@
+{
+    "files.autoSave": "afterDelay",
+    "pylint.args": [
+        "--load-plugins",
+        "pylint_django",
+        "--django-settings-module=app.settings",
+    ],
+    "flake8.ignorePatterns": [
+        "app/*",
+        "app/doctolib/*",
+        "app/authentification/*"
+    ],
+    "pylint.importStrategy": "fromEnvironment",
+    "pylint.interpreter": [
+        "/home/dakoro/Doctolib_David/doc/bin/python"
+    ],
+}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<title>EDA IA</title>
+
+<h1>Bienvenue dans la zone EDA IA {{ prenom }} !</h1>
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+<div>
+    <canvas id="stressImpact"></canvas>
+</div>
+
+<script>
+    
+    function displayChart(chart_name, typeChart, title, labels, data) {
+        const ctx = document.getElementById(chart_name);
+        new Chart(ctx, {
+        type: typeChart,
+        data: {
+            labels: labels,
+            datasets: [{
+            label: title,
+            data: {{ data }},
+            borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        }
+        });
+    }
+
+    const labels = {{ labels | safe }}
+    const stress_labels = {{ stress_labels | safe }}
+    const stress_data = {{ stress_data }}
+    const data = {{ data }}
+    displayChart('myChart', 'bar', 'Fréquence Cardiaque', labels, data)
+    displayChart('stressImpact', 'bar', 'Impact du stress', stress_labels, stress_data)
+</script>
+{% endblock %}

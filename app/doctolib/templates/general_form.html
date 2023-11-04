@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'formManip.js' %}" defer></script>
+    <title>Formulaire Général</title>
+</head>
+<body>
+    <h1>Bienvenue dans le formulaire Général de santé {{prenom}} !</h1>
+    <form id="formContainer" method="post">
+        {% csrf_token %}
+        {{ formulaire.as_p }}
+        <button type="button" id="nextBtn">Suivant</button>
+        <button type="submit" id="submitBtn" style="display:none;">Envoyer</button>
+    </form>
+</body>
+</html>

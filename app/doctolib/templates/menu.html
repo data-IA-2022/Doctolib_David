@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        <li>
+            <a href="{% url 'home' %}">Accueil</a>
+        </li>
+        <li>Formulaires
+            <ul>
+                <li>
+                    <a href="{% url "general_form" %}">Formulaire de santé générale</a></li>
+                <li><a href="{% url "stress_form" %}">Formulaire de niveau de stress</a></li>
+            </ul>
+        </li>
+        <li><a href="">Historique</a></li>
+        <li><a href="{% url 'eda' %}">EDA et IA</a></li>
+        <li><a href="{% url 'attribution' %}">Associé un médecin à un patient</a></li>
+        <li><a href="{% url 'consult_general' %}">Consulter les données générales</a></li>
+        <li><a href="{% url 'consult_stress' %}">Consulter les données sur le stress</a></li>
+        <li><a href="{% url 'comptes' %}">Comptes</a></li>
+        <li><a href="{% url 'deconnect' %}">Déconnexion</a></li>
+    </ul>
+</nav>
