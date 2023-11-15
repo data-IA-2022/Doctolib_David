@@ -33,4 +33,11 @@ python -m venv env
 ```bash
 pip install -r requiements.txt
 ```
+- start tailwind
+```bash
+cd app && python manage.py tailwind start
+```
 - start the server
+```bash
+cd app && python manage.py runserver
+```
