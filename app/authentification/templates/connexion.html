@@ -1,17 +1,10 @@
-{% load static %}
-{% load static tailwind_tags %}
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-    {% tailwind_css %}
-</head>
+{% block content %}
+
 <body>
     {{ message }}
-    <div class="w-full max-w-xs">
+    <div class="grid place-items-center">
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="" method="post">
             <div class="mb-4">
             {% csrf_token %}
@@ -39,4 +32,4 @@
         &copy;2020 Acme Corp. All rights reserved.
     </p>
 </body>
-</html>
+{% endblock content %}

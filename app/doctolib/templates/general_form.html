@@ -4,6 +4,7 @@
     <title>Formulaire de Santé générale</title>
     <p>{{ message }}</p>
     <h1>Bienvenue dans le formulaire Général de santé {{request.user.username}} !</h1>
+    {% if message == '' %}  
     <div class="w-full max-w-xs">
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" id="formContainer" method="post">
             {% csrf_token %}
@@ -21,5 +22,6 @@
                     style="display:none;">Envoyer</button>
         </form>
     </div>
+    {% endif %}
 </body>
 {% endblock content %}

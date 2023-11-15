@@ -215,7 +215,7 @@ def post_general_form(request):
         return render(request,
                     "general_form.html",
                     {"formulaire": formulaire})
-    
+
     message = f'Formulaire à déjà été rempli, vous devez attendre {current_date - timedelta(days=1)}'
     return render(request, 'general_form.html', {"message": message})
 
@@ -232,31 +232,32 @@ def post_stress_form(request):
     """
     username = request.user.username
     user_id = Utilisateur.objects.filter(username=username)[0]
-    period_general_form = user_id.period_general_from
-    print(period_general_form)
-    query_date = GeneralFormRecord.objects.filter(patient_username=username)
+    period_stress_form = user_id.period_stress_from
+    print(period_stress_form)
+    query_date = StressFormRecord.objects.filter(patient_username=username)
     if not query_date:
         if request.method == "POST":
-            formulaire = PostGeneralForm(request.POST)
+            formulaire = PostStressForm(request.POST)
             if formulaire.is_valid():
                 formulaire.save()
         else:
-            formulaire = PostGeneralForm()
+            formulaire = PostStressForm()
         return render(request,
                     "general_form.html",
                     {"formulaire": formulaire})
-        
+
     last_date = sorted([v.created_at for v in query_date])[-1]
     print(last_date)
     current_date = last_date - date.today()
     print(current_date < timedelta(days=1))
+    
     if current_date > timedelta(days=1):
         if request.method == "POST":
-            formulaire = PostGeneralForm(request.POST)
+            formulaire = PostStressForm(request.POST)
             if formulaire.is_valid():
                 formulaire.save()
         else:
-            formulaire = PostGeneralForm()
+            formulaire = PostStressForm()
         return render(request,
                     "general_form.html",
                     {"formulaire": formulaire})

@@ -1,30 +1,30 @@
-<nav class="bg-gray-800 p-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <ul class="flex">
-            <li>
-                <a class="text-white mx-2" href="{% url 'home' %}">Accueil</a>
-            </li>
-            <li>
+<nav>
+    <ul class="flex border-b">
+        <li class="-mb-px mr-1">
+            <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" href="{% url 'home' %}">Accueil</a>
+        </li>
+        {% if not user.is_superuser %}
+            <li class="mr-1">
                 <ul class="flex">
-                    <li><a class="text-white mx-2" href="{% url "general_form" %}">Formulaire de santé générale</a></li>
-                    <li><a class="text-white mx-2" href="{% url "stress_form" %}">Formulaire de niveau de stress</a></li>
+                    <li><a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="{% url "general_form" %}">Formulaire de santé générale</a></li>
+                    <li><a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="{% url "stress_form" %}">Formulaire de niveau de stress</a></li>
                 </ul>
             </li>
-            {% if user.role != 'patient' %}
-                <li><a class="text-white mx-2" href="{% url 'historique' %}">Historique</a></li>
-                {% endif %}
-                {% if user.role == "doctor" %}
-            <li><a class="text-white mx-2" href="{% url 'eda' %}">EDA et IA</a></li>
+        {% endif %}
+        {% if user.role != 'patient' %}
+            <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="{% url 'historique' %}">Historique</a></li>
             {% endif %}
-            {% if user.is_superuser %}
-            <li><a class="text-white mx-2" href="{% url 'attribution' %}">Associé un médecin à un patient</a></li>
-            {% endif %}
-            {% if user.role != 'patient' %}
-            {% endif %}
-            <li><a class="text-white mx-2" href="{% url 'consult_stress' %}">Consulter les données sur le stress</a></li>
-            <li><a class="text-white mx-2" href="{% url 'consult_general' %}">Consulter les données générales</a></li>
-            <li><a class="text-white mx-2" href="{% url 'comptes' %}">Comptes</a></li>
-            <li><a class="text-white mx-2" href="{% url 'deconnect' %}">Déconnexion</a></li>
-        </ul>
-    </div>
+            {% if user.role == "doctor" %}
+            <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="{% url 'eda' %}">EDA et IA</a></li>
+        {% endif %}
+        {% if user.is_superuser %}
+        <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="{% url 'attribution' %}">Associé un médecin à un patient</a></li>
+        {% endif %}
+        {% if user.role != 'patient' %}
+        {% endif %}
+        <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="{% url 'consult_stress' %}">Consulter les données sur le stress</a></li>
+        <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="{% url 'consult_general' %}">Consulter les données générales</a></li>
+        <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="{% url 'comptes' %}">Comptes</a></li>
+        <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="{% url 'deconnect' %}">Déconnexion</a></li>
+    </ul>
 </nav>
