@@ -8,6 +8,14 @@ from authentification.models import Utilisateur
 
 
 def connexion(request):
+    """View for the connexion feature
+
+    Args:
+        request (Any): request object received from the client  
+
+    Returns:
+        Any: render object 
+    """
     message = ''
     if request.method == 'POST':
         username = request.POST['username']
@@ -24,24 +32,40 @@ def connexion(request):
 
 
 def deconnect(request):
+    """View for the deconnect feature
+
+    Args:
+        request (Any): request object
+
+    Returns:
+        Any: render function
+    """
     logout(request)
     return redirect('connexion')
 
 
 def inscription(request):
-    ideeMDP = "".join([
+    """View for the incrisption feature
+
+    Args:
+        request (Any): request  object
+
+    Returns:
+        Any: render the result on the pages
+    """
+    idee_mdp = "".join([
         random.choice(string.printable) for _ in range(12)]).replace(" ", "")
     if request.method == "POST":
         username = request.POST["username"]
-        motDePasse = request.POST["motDePasse"]
+        mot_de_passe = request.POST["mot_de_passe"]
         role = request.POST['role']
         print(role)
         _ = Utilisateur.objects.create_user(username=username,
-                                            password=motDePasse,
+                                            password=mot_de_passe,
                                             role=role)
 
         return redirect("connexion")
 
     return render(request,
                   "inscription.html",
-                  {"ideeMDP": ideeMDP.replace(" ", "")})
+                  {"idee_mdp": idee_mdp.replace(" ", "")})

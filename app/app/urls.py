@@ -21,6 +21,7 @@ from doctolib.views import (
     home,
     comptes,
     eda,
+    historique,
     attribution,
     post_general_form,
     post_stress_form)
@@ -34,6 +35,7 @@ urlpatterns = [
     path('', connexion, name='connexion'),
     path('deconnect', deconnect, name='deconnect'),
     path('inscription', inscription, name='inscription'),
+    path('historique', historique, name='historique'),
     path('comptes', comptes, name='comptes'),
     path('eda', eda, name='eda'),
     path('attribution', attribution, name='attribution'),

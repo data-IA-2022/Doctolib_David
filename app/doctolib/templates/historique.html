@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Historique</title>
+
+{% if user.is_superuser %}
+<h2>Table d'association Medecin Patient pour l'admin</h2>
+<table>
+    <tr>
+        <th>
+            Medecin
+        </th>
+        <th>
+            Patient
+        </th>
+    </tr>
+    {% for ligne in table_association_medecin_patient %}
+    <tr>
+        <td>{{ ligne.idMedecin }}</td>
+        <td>{{ ligne.idPatient }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+{% if user.role == 'doctor' %}
+<h2>Table d'association Medecin Patient pour {{ user.username }}</h2>
+<table>
+    <tr>
+        <th>
+            Patient
+        </th>
+    </tr>
+    {% for ligne in table_patients %}
+    <tr>
+        <td>{{ ligne }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+
+
+{% endblock content %}
+

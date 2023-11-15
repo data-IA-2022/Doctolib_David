@@ -10,7 +10,7 @@
     <label>Choisissez le médecin à associer :</label><br>
     <select name="medecin" id="medecin">
         <option value="">Choisissez un médecin</option>
-        {% for medecin in  medecinsID %}
+        {% for medecin in  medecins_id %}
         <option value={{ medecin }}>{{ medecin }}</option>
         {% endfor %}
     </select>
@@ -18,7 +18,7 @@
     <label>Choisissez le patient à associer :</label><br>
     <select name="patient" id="patient">
         <option value="">Choisissez un patient</option>
-        {% for patient in  listePatientsNonAssocies %}
+        {% for patient in  list_patients_non_associes %}
         <option value={{ patient }}>{{ patient }}</option>
         {% endfor %}
     </select>
@@ -35,7 +35,7 @@
             Patient
         </th>
     </tr>
-    {% for ligne in tableAssociationMedecinPatient %}
+    {% for ligne in table_association_medecin_patient %}
     <tr>
         <td>{{ ligne.idMedecin }}</td>
         <td>{{ ligne.idPatient }}</td>

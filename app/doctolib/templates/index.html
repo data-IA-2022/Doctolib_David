@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
+{% extends "base.html" %}
+
+{% block content %}
+<title>Home</title>
 <body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my first Django project!</p>
+    <h1>Bienvenue sur votre compte {{ request.user.username }}</h1>
     <a href="{% url "deconnect" %}" target="_blank">
-        <button>Deconnexion</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Deconnexion</button>
     </a>
 </body>
-</html>
+{% endblock content %}

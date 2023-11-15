@@ -1,13 +1,16 @@
+"""Module to create fake user"""
+
+from datetime import datetime, timedelta
 from django.core.management.base import BaseCommand
 from faker import Faker
 from faker.providers import python
 import numpy as np
 from authentification.models import Utilisateur
-from doctolib.models import Stress_form_record
-from datetime import datetime, timedelta
+from doctolib.models import StressFormRecord
 
 
 class Command(BaseCommand):
+    """Commmand class """
     help = 'Command Information'
 
     def handle(self, *args, **kwargs):
@@ -35,12 +38,12 @@ class Command(BaseCommand):
                 taux_vitamine_d = np.random.randint(20, 60)
                 taux_acide_urique = np.random.randint(150, 420)
                 taux_inr = np.random.randint(1, 6)
-                irritabilité = np.random.choice([0, 1, 5, 10])
+                irritabilite = np.random.choice([0, 1, 5, 10])
                 bouche_seche_gorge_seche = np.random.choice([0, 1, 5, 10])
                 actions_gestes_impulsifs = np.random.choice([0, 1, 5, 10])
                 difficulte_rester_assis = np.random.choice([0, 1, 5, 10])
                 cauchermars = np.random.choice([0, 1, 5, 10])
-                diarrhée = np.random.choice([0, 1, 5, 10])
+                diarrhee = np.random.choice([0, 1, 5, 10])
                 hauts_bas_emotifs = np.random.choice([0, 1, 5, 10])
                 fatigue_lourdeur_general = np.random.choice([0, 1, 5, 10])
                 sentiment_anxiete = np.random.choice([0, 1, 5, 10])
@@ -71,12 +74,12 @@ class Command(BaseCommand):
                     np.random.choice([0, 1, 5, 10])
                 mains_moites = np.random.choice([0, 1, 5, 10])
                 impact_stress_vie_actuelle = sum([
-                    irritabilité,
+                    irritabilite,
                     bouche_seche_gorge_seche,
                     actions_gestes_impulsifs,
                     difficulte_rester_assis,
                     cauchermars,
-                    diarrhée,
+                    diarrhee,
                     hauts_bas_emotifs,
                     fatigue_lourdeur_general,
                     sentiment_anxiete,
@@ -101,7 +104,7 @@ class Command(BaseCommand):
                     mains_moites,
                 ])
 
-                Stress_form_record.objects.create(
+                StressFormRecord.objects.create(
                     patient_username=patient_username,
                     created_at=created_at,
                     dyspnee=dyspnee,
@@ -119,12 +122,12 @@ class Command(BaseCommand):
                     taux_vitamine_d=taux_vitamine_d,
                     taux_acide_urique=taux_acide_urique,
                     taux_inr=taux_inr,
-                    irritabilité=irritabilité,
+                    irritabilite=irritabilite,
                     bouche_seche_gorge_seche=bouche_seche_gorge_seche,
                     actions_gestes_impulsifs=actions_gestes_impulsifs,
                     difficulte_rester_assis=difficulte_rester_assis,
                     cauchermars=cauchermars,
-                    diarrhée=diarrhée,
+                    diarrhee=diarrhee,
                     hauts_bas_emotifs=hauts_bas_emotifs,
                     fatigue_lourdeur_generalisees=fatigue_lourdeur_general,
                     sentiment_anxiete=sentiment_anxiete,

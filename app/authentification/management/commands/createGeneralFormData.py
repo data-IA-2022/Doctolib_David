@@ -3,7 +3,7 @@ from faker import Faker
 from faker.providers import python
 from numpy import random
 from authentification.models import Utilisateur
-from doctolib.models import General_form_record
+from doctolib.models import GeneralFormRecord
 from datetime import datetime, timedelta
 
 
@@ -43,10 +43,10 @@ class Command(BaseCommand):
                     ['Aucune', 'Légère', 'Modérée', 'Intense'])
                 duree_activite = random.randint(15, 120)
 
-                General_form_record.objects.create(
+                GeneralFormRecord.objects.create(
                     patient_username=patient_username,
                     created_at=created_at,
-                    poids=poids,
+                    poids_kg=poids,
                     taille_cm=taille_cm,
                     frequence_cardiaque=frequence_cardiaque,
                     tension_arterielle=tension_arterielle,

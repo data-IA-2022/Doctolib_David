@@ -1,18 +1,21 @@
 """Models module for doctolib"""
+
+from datetime import date
 from django.db import models
 from django.views.generic.list import ListView
+from authentification.models import Utilisateur, MedecinPatient
 
 
-class General_form_record(models.Model):
+class GeneralFormRecord(models.Model):
     """class for table schema
 
     Args:
         models (class): django models
     """
-    patient_username = models.TextField()
-    created_at = models.DateField()
-    poids_kg = models.TextField(blank=True, null=True)  # This field type is a guess.
-    taille_cm = models.TextField(blank=True, null=True)  # This field type is a guess.
+    patient_username = models.CharField(max_length=150, blank=True, null=True)
+    created_at = models.DateField(default=date.today())
+    poids_kg = models.BigIntegerField(blank=True, null=True)
+    taille_cm = models.BigIntegerField(blank=True, null=True)
     frequence_cardiaque = models.BigIntegerField(blank=True, null=True)
     tension_arterielle = models.BigIntegerField(blank=True, null=True)
     description_symptomes_cardio = models.TextField(blank=True, null=True)
@@ -23,16 +26,26 @@ class General_form_record(models.Model):
     description_effets_symptomes = models.TextField(blank=True, null=True)
     consommation_alcool = models.TextField(blank=True, null=True)
     grignotage = models.TextField(blank=True, null=True)
-    repas_pris_journee_field = models.BigIntegerField(db_column='repas_pris_journee ', blank=True, null=True)  # Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
-    quantite_eau_litre = models.TextField(blank=True, null=True)  # This field type is a guess.
-    quantite_alcool_litre = models.TextField(blank=True, null=True)  # This field type is a guess.
+    repas_pris_journee_field = models.BigIntegerField(
+        db_column='repas_pris_journee ',
+        blank=True,
+        null=True)
+    quantite_eau_litre = models.TextField(blank=True, null=True)
+    quantite_alcool_litre = models.TextField(blank=True, null=True)
     activite_physique_jour = models.TextField(blank=True, null=True)
     description_activite = models.TextField(blank=True, null=True)
     duree_activite = models.BigIntegerField(blank=True, null=True)
-        
-class Stress_form_record(models.Model):
-    patient_username = models.TextField()
-    created_at = models.DateField()
+
+
+class StressFormRecord(models.Model):
+    """Model for the stress form table
+
+    Args:
+        models (models.Model): base django model
+    """
+
+    patient_username = models.CharField(max_length=150, blank=True, null=True)
+    created_at = models.DateField(default=date.today())
     dyspnee = models.TextField(blank=True, null=True)
     oedeme = models.TextField(blank=True, null=True)
     episodes_infectieux = models.TextField(blank=True, null=True)
@@ -48,12 +61,12 @@ class Stress_form_record(models.Model):
     taux_vitamine_d = models.BigIntegerField(blank=True, null=True)
     taux_acide_urique = models.BigIntegerField(blank=True, null=True)
     taux_inr = models.BigIntegerField(blank=True, null=True)
-    irritabilité = models.BigIntegerField(blank=True, null=True)
+    irritabilite = models.BigIntegerField(blank=True, null=True)
     bouche_seche_gorge_seche = models.BigIntegerField(blank=True, null=True)
     actions_gestes_impulsifs = models.BigIntegerField(blank=True, null=True)
     difficulte_rester_assis = models.BigIntegerField(blank=True, null=True)
     cauchermars = models.BigIntegerField(blank=True, null=True)
-    diarrhée = models.BigIntegerField(blank=True, null=True)
+    diarrhee = models.BigIntegerField(blank=True, null=True)
     hauts_bas_emotifs = models.BigIntegerField(blank=True, null=True)
     fatigue_lourdeur_generalisees = models.BigIntegerField(blank=True, null=True)
     sentiment_anxiete = models.BigIntegerField(blank=True, null=True)
@@ -86,12 +99,26 @@ class GeneralFormList(ListView):
         ListView (class): django class
 
     """
-    model = General_form_record
+    model = GeneralFormRecord
     template_name = 'general_form_record_list.html'
+
+
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['field_names'] = [field.name for field in General_form_record._meta.fields]
-        context['records'] = General_form_record.objects.values(*context['field_names'])
+        context['field_names'] = [field.name for field in GeneralFormRecord._meta.fields]
+        username = self.request.user.username
+        print(self.request.user.username)
+        if self.request.user.is_superuser:
+            context['records'] = GeneralFormRecord.objects.values(*context['field_names'])
+            return context
+        if self.request.user.role == 'patient':
+            context['records'] = GeneralFormRecord.objects.filter(patient_username=username).values(*context['field_names'])
+            return context
+        idx = Utilisateur.objects.filter(username=username)[0]
+        list_patients = [v.idPatient.username for v in MedecinPatient.objects.filter(idMedecin=idx)]
+        print(list_patients)
+        context['records'] = GeneralFormRecord.objects.filter(patient_username__in=list_patients).values(*context['field_names'])
         return context
 
 
@@ -102,10 +129,20 @@ class StressFormList(ListView):
         ListView (class): django ListView class
 
     """
-    model = Stress_form_record
+    model = StressFormRecord
     template_name = 'stress_form_record_list.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['field_names'] = [field.name for field in Stress_form_record._meta.fields]
-        context['records'] = Stress_form_record.objects.values(*context['field_names'])
+        username = self.request.user.username
+        context['field_names'] = [field.name for field in StressFormRecord._meta.fields]
+        if self.request.user.is_superuser:
+            context['records'] = StressFormRecord.objects.values(*context['field_names'])
+            return context
+        if self.request.user.role == 'patient':
+            context['records'] = StressFormRecord.objects.filter(patient_username=username).values(*context['field_names'])
+            return context
+        idx = Utilisateur.objects.filter(username=username)[0]
+        list_patients = [v.idPatient.username for v in MedecinPatient.objects.filter(idMedecin=idx)]
+        print(list_patients)
+        context['records'] = StressFormRecord.objects.filter(patient_username__in=list_patients).values(*context['field_names'])
         return context

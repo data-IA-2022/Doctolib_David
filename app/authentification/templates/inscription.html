@@ -1,26 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-</head>
+{% extends "base.html" %}
+{% block content %}
+
 <body>
+    <title>Inscription</title>
+    <div class="w-full max-w-xs">
     <h1>Inscription</h1>
-    <p>Voici une idée de Mot de passe :<br>
-        {{ ideeMDP }}
-    </p>
-    <form method="post">
-        {% csrf_token %}
-        <input type="text" name="username" required>
-        <input type="password" name="motDePasse" required>
-        <select name="role" id="role_input">
-            <option value="patient">Patient</option>
-            <option value="doctor">Doctor</option>
-        </select>
-        <input type="submit">
-    </form>
-    <p>Revenir à la page de connexion</p>
-    <p><a href="{% url 'connexion' %}">Connexion</a></p>
+        <p>Voici une idée de Mot de passe :<br>
+            {{ idee_mdp}}
+        </p>
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="" method="post">
+            <div class="mb-4">
+                {% csrf_token %}
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                    Username
+                </label>
+                <input type="text" name="username" required>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="mot_de_passe">
+                    Password
+                </label>
+                <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="password" name="mot_de_passe" required>
+                <p class="text-red-500 text-xs italic">Please choose a password.</p>
+                <select name="role" id="role_input" required>
+                    <option value="patient">Patient</option>
+                    <option value="doctor">Doctor</option>
+                </select>
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                      Sign In
+                    </button>
+                </div>
+            </div>
+        </form>
+        <p><a class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" href="{% url 'connexion' %}">Connexion</a></p>
+    </div>
 </body>
-</html>
+{% endblock content %}

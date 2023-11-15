@@ -10,6 +10,9 @@ class Utilisateur(AbstractUser):
     Args:
         AbstractUser (class): django AbstractUser class
     """
+    period_general_from = models.IntegerField(null=True, blank=True, default=1)
+    period_stress_from = models.IntegerField(null=True, blank=True, default=5)
+
     ROLE_CHOICES = (
           ('doctor', 'Doctor'),
           ('patient', 'Patient'),

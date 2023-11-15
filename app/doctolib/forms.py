@@ -1,6 +1,6 @@
 """forms Module"""
 from django import forms
-from doctolib.models import General_form_record, Stress_form_record
+from doctolib.models import GeneralFormRecord, StressFormRecord
 
 
 class PostGeneralForm(forms.ModelForm):
@@ -10,8 +10,8 @@ class PostGeneralForm(forms.ModelForm):
         forms (class): django class for forms
     """
     class Meta:
-        model = General_form_record
-        exclude = []
+        model = GeneralFormRecord
+        exclude = [] # pylint: disable=W5104:modelform-uses-exclude
 
 
 class PostStressForm(forms.ModelForm):
@@ -21,5 +21,5 @@ class PostStressForm(forms.ModelForm):
         forms (class): _description_
     """
     class Meta:
-        model = Stress_form_record
-        exclude = []
+        model = StressFormRecord
+        exclude = [] # pylint: disable=W5104:modelform-uses-exclude
