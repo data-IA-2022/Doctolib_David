@@ -19,3 +19,18 @@
 ### La base de données
 - Schéma fonctionnel
 - SQLite
+
+### Setup
+- clone repos
+```bash
+git clone git@github.com:data-IA-2022/Doctolib_David.git <folder_path>
+```
+- create env
+```bash
+python -m venv env 
+```
+- install requirements
+```bash
+pip install -r requiements.txt
+```
+- start the server
