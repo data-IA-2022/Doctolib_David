@@ -186,6 +186,7 @@ def post_general_form(request):
         Any: render the result on the page
     """
     username = request.user.username
+    message = ""
     user_id = Utilisateur.objects.filter(username=username)[0]
     period_general_form = user_id.period_general_from
     print(period_general_form)
@@ -199,13 +200,16 @@ def post_general_form(request):
             formulaire = PostGeneralForm()
         return render(request,
                     "general_form.html",
-                    {"formulaire": formulaire})
-        
+                    {"formulaire": formulaire,
+                     "message": message})
+
     last_date = sorted([v.created_at for v in query_date])[-1]
     print(last_date)
-    current_date = last_date - date.today()
-    print(current_date < timedelta(days=1))
-    if current_date > timedelta(days=1):
+    current_date = date.today() - last_date
+    print(current_date)
+    print(timedelta(days=1))
+    print(current_date >= timedelta(days=1))
+    if current_date >= timedelta(days=1):
         if request.method == "POST":
             formulaire = PostGeneralForm(request.POST)
             if formulaire.is_valid():
@@ -214,9 +218,10 @@ def post_general_form(request):
             formulaire = PostGeneralForm()
         return render(request,
                     "general_form.html",
-                    {"formulaire": formulaire})
+                    {"formulaire": formulaire,
+                     "message": message})
 
-    message = f'Formulaire à déjà été rempli, vous devez attendre {current_date - timedelta(days=1)}'
+    message = f'Formulaire à déjà été rempli, vous devez attendre {current_date + timedelta(days=1)}'
     return render(request, 'general_form.html', {"message": message})
 
 
@@ -231,6 +236,7 @@ def post_stress_form(request):
         Any: render the result on the page
     """
     username = request.user.username
+    message = ""
     user_id = Utilisateur.objects.filter(username=username)[0]
     period_stress_form = user_id.period_stress_from
     print(period_stress_form)
@@ -243,15 +249,17 @@ def post_stress_form(request):
         else:
             formulaire = PostStressForm()
         return render(request,
-                    "general_form.html",
-                    {"formulaire": formulaire})
+                    "stress_form.html",
+                    {"formulaire": formulaire,
+                     "message": message})
 
     last_date = sorted([v.created_at for v in query_date])[-1]
     print(last_date)
-    current_date = last_date - date.today()
-    print(current_date < timedelta(days=1))
+    current_date = date.today() - last_date
+    print(current_date, timedelta(days=5))
+    # print(current_date >= timedelta(days=5))
     
-    if current_date > timedelta(days=1):
+    if current_date >= timedelta(days=5):
         if request.method == "POST":
             formulaire = PostStressForm(request.POST)
             if formulaire.is_valid():
@@ -259,8 +267,9 @@ def post_stress_form(request):
         else:
             formulaire = PostStressForm()
         return render(request,
-                    "general_form.html",
-                    {"formulaire": formulaire})
+                    "stress_form.html",
+                    {"formulaire": formulaire,
+                     "message": message})
 
     message = f'Formulaire à déjà été rempli, vous devez attendre {current_date - timedelta(days=5)}'
-    return render(request, 'general_form.html', {"message": message})
+    return render(request, 'stress_form.html', {"message": message})
